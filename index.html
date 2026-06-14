@@ -1,0 +1,343 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>RUBRA</title>
+
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@300;400;600;700&display=swap" rel="stylesheet">
+
+<style>
+
+*{
+margin:0;
+padding:0;
+box-sizing:border-box;
+}
+
+html{
+scroll-behavior:smooth;
+}
+
+body{
+background:#000;
+color:white;
+font-family:'Cormorant Garamond',serif;
+overflow-x:hidden;
+}
+
+body::before{
+content:"";
+position:fixed;
+top:0;
+left:0;
+width:100%;
+height:100%;
+background:radial-gradient(circle at center,
+rgba(220,20,60,0.12),
+transparent 60%);
+pointer-events:none;
+z-index:-1;
+}
+
+nav{
+position:fixed;
+top:0;
+left:0;
+width:100%;
+padding:20px 50px;
+display:flex;
+justify-content:space-between;
+background:rgba(0,0,0,0.35);
+backdrop-filter:blur(10px);
+z-index:1000;
+}
+
+.logo{
+font-size:32px;
+letter-spacing:10px;
+font-weight:bold;
+}
+
+.menu{
+font-size:18px;
+}
+
+section{
+min-height:100vh;
+display:flex;
+align-items:center;
+justify-content:center;
+gap:80px;
+padding:80px;
+opacity:0;
+transform:translateY(60px);
+transition:1s;
+}
+
+section.show{
+opacity:1;
+transform:translateY(0);
+}
+
+.hero{
+flex-direction:column;
+text-align:center;
+opacity:1;
+transform:none;
+}
+
+.hero img,
+.content img{
+width:340px;
+filter:drop-shadow(0 0 40px crimson);
+animation:float 4s ease-in-out infinite;
+transition:0.4s;
+}
+
+.hero img:hover,
+.content img:hover{
+transform:scale(1.05);
+}
+
+.hero h1{
+font-size:110px;
+letter-spacing:20px;
+text-shadow:0 0 20px crimson;
+}
+
+.hero p{
+font-size:28px;
+color:#ccc;
+}
+
+.scroll{
+margin-top:30px;
+font-size:18px;
+animation:bounce 2s infinite;
+}
+
+.text{
+max-width:500px;
+}
+
+.text h2{
+font-size:70px;
+margin-bottom:20px;
+letter-spacing:8px;
+text-shadow:0 0 15px crimson;
+}
+
+.text p{
+font-size:24px;
+line-height:1.7;
+color:#d5d5d5;
+}
+
+.section2{background:#080808;}
+.section3{background:#111111;}
+.section4{background:#080808;}
+.section5{background:#111111;}
+.section6{background:#080808;}
+.section7{background:#111111;}
+
+.newsletter{
+flex-direction:column;
+text-align:center;
+}
+
+.newsletter h2{
+font-size:70px;
+margin-bottom:20px;
+}
+
+.newsletter input{
+padding:15px;
+width:320px;
+font-size:18px;
+border:none;
+border-radius:8px;
+margin-top:20px;
+}
+
+.newsletter button{
+padding:15px 25px;
+border:none;
+background:crimson;
+color:white;
+font-size:18px;
+border-radius:8px;
+margin-left:10px;
+cursor:pointer;
+}
+
+footer{
+padding:60px;
+text-align:center;
+background:black;
+font-size:20px;
+letter-spacing:4px;
+}
+
+@keyframes float{
+0%{transform:translateY(0);}
+50%{transform:translateY(-20px);}
+100%{transform:translateY(0);}
+}
+
+@keyframes bounce{
+0%,100%{transform:translateY(0);}
+50%{transform:translateY(10px);}
+}
+
+</style>
+</head>
+
+<body>
+
+<nav>
+<div class="logo">RUBRA</div>
+<div class="menu">Luxury Wellness</div>
+</nav>
+
+<section class="hero">
+
+<img src="images/whole-pomegranate.png">
+
+<h1>RUBRA</h1>
+
+<p>Pomegranate • Wellness • Luxury</p>
+
+<div class="scroll">↓ Scroll Down</div>
+
+</section>
+
+<section class="content section2">
+
+<img src="images/open-pomegranate.png">
+
+<div class="text">
+<h2>THE BREAK</h2>
+<p>
+A single fruit opens to reveal hundreds of glowing ruby seeds.
+Nature's luxury hidden within.
+</p>
+</div>
+
+</section>
+
+<section class="content section3">
+
+<img src="images/seeds.png">
+
+<div class="text">
+<h2>THE RUBIES</h2>
+<p>
+Each seed shines like a gemstone.
+Bursting outward with vitality and life.
+</p>
+</div>
+
+</section>
+
+<section class="content section4">
+
+<img src="images/juice-glass.png">
+
+<div class="text">
+<h2>THE POUR</h2>
+<p>
+A crystal glass filled with ruby pomegranate goodness.
+Pure wellness. Pure luxury.
+</p>
+</div>
+
+</section>
+
+<section class="content section5">
+
+<img src="images/dawn-product.png">
+
+<div class="text">
+<h2>DAWN</h2>
+<p>
+Your morning starts here.
+Crafted for energy and vitality.
+</p>
+</div>
+
+</section>
+
+<section class="content section6">
+
+<div class="text">
+<h2>DUSK</h2>
+<p>
+The golden hour, bottled.
+Warm, rich and luxurious.
+</p>
+</div>
+
+<img src="images/dusk-product.png">
+
+</section>
+
+<section class="content section7">
+
+<img src="images/night-product.png">
+
+<div class="text">
+<h2>NIGHT</h2>
+<p>
+While you sleep, it works.
+Deep restoration powered by nature.
+</p>
+</div>
+
+</section>
+
+<section class="newsletter">
+
+<h2>JOIN THE RITUAL</h2>
+
+<p>Subscribe for wellness updates.</p>
+
+<div style="margin-top:20px;">
+<input type="email" placeholder="Enter your email">
+<button>Subscribe</button>
+</div>
+
+</section>
+
+<footer>
+
+R U B R A
+
+<br><br>
+
+© 2026 Luxury Pomegranate Experience
+
+</footer>
+
+<script>
+
+const sections=document.querySelectorAll("section");
+
+window.addEventListener("scroll",()=>{
+
+sections.forEach(section=>{
+
+const top=section.getBoundingClientRect().top;
+
+if(top<window.innerHeight-100){
+section.classList.add("show");
+}
+
+});
+
+});
+
+</script>
+
+</body>
+</html>
